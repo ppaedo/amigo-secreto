@@ -12,10 +12,11 @@ function agregarAmigo(){
     alert(`El nombre ${nombreAmigo} ya está en la lista`);
     return;
     }
-//Agregar a nombre a la lista
-amigos.push(nombreAmigo);
-//Limpiar campo
-inputAmigo.value = "";
+
+amigos.push(nombreAmigo);//Agregar a nombre a la lista
+
+inputAmigo.value = ""; //Limpiar campo
+inputAmigo.focus(); //Se establece foco del elemento de entrada
 
 actualizarLista();
 }
@@ -37,3 +38,6 @@ function sortearAmigo(){
     const resultado = document.getElementById("resultado");
     resultado.innerHTML = `<li>El amigo secreto es: ${amigoSecreto}</li>`;
 }
+
+
+  
