@@ -32,7 +32,9 @@ function actualizarLista(){
     }
 }
 function sortearAmigo(){
-
+    if (amigos.length===0){
+        alert("No hay amigos para sortear")
+    }
     const indiceAleatorio = Math.floor(Math.random()*amigos.length);
     const amigoSecreto = amigos[indiceAleatorio];
     const resultado = document.getElementById("resultado");
